@@ -1,0 +1,114 @@
+/* Global layout and background */
+body {
+  background: linear-gradient(135deg, #7cc6fe, #e89cff, #ffe07d);
+  background-size: 300% 300%; /* Enables animation movement */
+  animation: bgShift 12s ease infinite;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Animated background keyframe */
+@keyframes bgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Hero section */
+.hero h1 {
+  font-size: 3rem; /* Big title */
+}
+
+.hero p {
+  font-size: 1.1rem; /* subtitle size */
+}
+
+/* Subscribe box */
+.subscribe-section {
+  background: white;
+  border-radius: 12px; /* Smooth rounded corners */
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Images and video */
+img {
+  max-width: 100%; /* Ensures responsiveness */
+  height: auto;
+}
+
+.start-video {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 12px; /* Smooth edges */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  margin-top: 15px;
+}
+
+/* Feature cards */
+.feature-card {
+  display: block;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+ /* Hover animation for cards */
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Contact form */
+.contact-form {
+  max-width: 600px; /* Centered smaller form */
+}
+
+/* Workspace layout */
+.canvas-area {
+  background: #f8f9fa;
+  border-radius: 12px;
+  min-height: 350px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  position: relative; /* Required for movable elements */
+  overflow: hidden;
+}
+/* Elements placed inside canvas */
+.canvas-item {
+  position: absolute; /* Allows drag-like positioning */
+  cursor: move;
+}
+/* Template list layout */
+.template-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.template-btn {
+  border: 1px solid #0d6efd;
+  background: white;
+  color: #0d6efd;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.template-btn:hover {
+  background: #0d6efd;
+  color: white;
+}
+
+/* Responsive text */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem; /* Smaller title on phone */
+  }
+}
